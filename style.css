@@ -1,0 +1,240 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: Josefin Sans;
+}
+
+#header {
+  background: url(./img/Home-img/hero-img.png) no-repeat right center;
+  background-size: 60% auto;
+  width: 100%;
+  height: 120vh;
+  object-fit: contain;
+  object-position: right;
+  background-repeat: no repeat;
+  position: relative;
+}
+
+/* Navbar (Initially normal, then sticky) */
+#navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 30px 70px;
+  padding-right: 5%;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: rgba(255, 255, 255, 0.6); /* Transparent at first */
+  transition: background 0.3s ease-in-out, padding 0.3s;
+}
+
+#navbar.scrolled {
+  position: fixed;
+  top: 0;
+  background: white; /* Becomes solid when sticky */
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  padding: 25px 70px; /* Slightly smaller padding when sticky */
+}
+
+#navbar .logo img {
+  width: 184px;
+}
+
+.nav-link ul {
+  display: flex;
+  list-style: none;
+  gap: 30px;
+}
+
+.nav-link ul li {
+  padding: 10px;
+  /* margin-right: 60px; */
+  position: relative;
+}
+
+.nav-link ul li a {
+  text-decoration: none;
+  color: #423f8d;
+  font-size: 22px;
+  font-weight: bold;
+  position: relative; /* So the underline stays inside the link */
+  transition: color 0.3s ease-in-out; /* Smooth color transition */
+}
+
+.nav-link ul li a:not(:has(button)):hover {
+  color: #ff5800;
+}
+.nav-link ul li a::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  bottom: -15px; /* Position it slightly below the text */
+  width: 0%;
+  height: 2px;
+  background-color: #ff5800; /* Orange underline */
+  transition: width 0.3s ease-in-out, left 0.3s ease-in-out;
+}
+
+.nav-link ul li a:not(:has(button)):hover::after {
+  width: 100%; /* Expand underline */
+  left: 0; /* Shift it to start from the left */
+}
+.nav-link ul li a button {
+  background-color: #ff5800;
+  border: none;
+  padding: 13px 45px;
+  color: white;
+  font-size: 22px;
+  cursor: pointer;
+  border-radius: 30px;
+  margin-right: 60px;
+}
+.nav-link ul li a button i {
+  font-size: 22px;
+  color: white;
+  padding-right: 8px;
+  text-align: center;
+}
+
+/* .nav-link ul li a button:hover {
+  background-color: #d94e00;
+} */
+
+/* Ensure the parent li is positioned correctly */
+.dropdown {
+  position: relative;
+}
+
+/* Hide dropdown menu initially */
+.dropdown-menu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: #ff5800; /* Orange background */
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  width: 180px; /* Set a fixed width */
+  border-radius: 5px;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out;
+  display: flex;
+  flex-direction: column; /* Make the items stack vertically */
+}
+
+/* Dropdown list items */
+.dropdown-menu li {
+  padding: 10px 15px;
+  text-align: left; /* Align text to the left */
+}
+
+/* Dropdown links */
+.dropdown-menu li a {
+  color: white !important; /* Ensure font is white */
+  text-decoration: none;
+  display: block;
+  width: 100%; /* Make each link take the full width */
+  transition: transform 0.3s ease-in-out;
+}
+
+/* Hover effect for dropdown items */
+.dropdown-menu li a:hover {
+  transform: translateX(5px);
+}
+
+/* Show dropdown only when hovering */
+.dropdown:hover .dropdown-menu {
+  opacity: 1;
+  visibility: visible;
+}
+
+/* ===============header content=========== */
+
+.header-content {
+  height: 200vh;
+  padding-top: 230px;
+  padding-left: 98px;
+  text-align: left;
+  overflow: hidden;
+}
+.header-content h2 {
+  font-size: 90px;
+  font-weight: 700;
+  color: #423f8d;
+  max-width: 900px;
+  padding-bottom: 15px;
+}
+.header-content p {
+  font-size: 30px;
+  font-weight: 400;
+  color: #423f8d;
+  max-width: 800px;
+  line-height: 50px;
+}
+.header-content button {
+  background-color: #ff5800;
+  color: white;
+  padding: 30px 90px;
+  border: none;
+  border-radius: 35px;
+  font-size: 20px;
+  font-weight: 700;
+  margin-top: 70px;
+}
+/* Content below the hero section */
+.content {
+  /* height: 200vh; */
+  padding: 40px;
+  text-align: center;
+  padding-left: 22%;
+  padding-right: 22%;
+}
+.content h1 {
+  color: #423f8d;
+  font-size: 45px;
+  font-weight: 700;
+  margin-bottom: 45px;
+}
+.content p {
+  color: #423f8dc4;
+  font-size: 25px;
+  font-weight: 500;
+}
+.carousel {
+  width: 100%;
+  overflow: hidden;
+  background: #f8f8f8;
+  padding: 40px 10px;
+  padding-top: 60px;
+}
+
+.carousel-track {
+  display: flex;
+  gap: 60px;
+  animation: scroll 30s linear infinite; /* Adjust speed */
+}
+
+.carousel-track img {
+  width: 500px; /* Adjust size */
+  height: 70px;
+  object-fit: contain;
+}
+
+/* Keyframes for infinite scrolling */
+@keyframes scroll {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-100%);
+  }
+}
