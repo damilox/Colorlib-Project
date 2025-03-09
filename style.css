@@ -192,7 +192,6 @@ body {
 }
 /* Content below the hero section */
 .content {
-  /* height: 200vh; */
   padding: 40px;
   text-align: center;
   padding-left: 22%;
@@ -220,11 +219,11 @@ body {
 .carousel-track {
   display: flex;
   gap: 60px;
-  animation: scroll 30s linear infinite; /* Adjust speed */
+  animation: scroll 30s linear infinite;
 }
 
 .carousel-track img {
-  width: 500px; /* Adjust size */
+  width: 500px;
   height: 70px;
   object-fit: contain;
 }
@@ -237,4 +236,209 @@ body {
   to {
     transform: translateX(-100%);
   }
+}
+
+/* ==============End of carousel==================== */
+
+.plane {
+  margin-right: 5%;
+  margin-left: 5%;
+  margin-top: 15%;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr;
+  gap: 200px;
+}
+.plane img {
+  width: 750px;
+}
+.plane h2 {
+  color: #423f8d;
+  font-size: 70px;
+  font-weight: bold;
+  max-width: 700px;
+  line-height: 90px;
+}
+.plane p {
+  color: #423f8d;
+  font-size: 30px;
+  font-weight: 200;
+  line-height: 50px;
+  margin-top: 20px;
+}
+.plane button {
+  background-color: #ff5800;
+  color: white;
+  padding: 30px 70px;
+  border: none;
+  border-radius: 40px;
+  font-size: 20px;
+  font-weight: 700;
+  margin-top: 25px;
+}
+
+/* ------------End of Plane Section------- */
+
+/* ------------Begining Of How can we help you section-------- */
+.our-services {
+  background: url(./img/Home-img/section_bg01.png);
+  height: 200vh;
+  background-repeat: no-repeat;
+}
+.our-services .text {
+  text-align: center;
+  padding-top: 280px;
+}
+.our-services .text h2 {
+  color: #423f8d;
+  font-size: 60px;
+  font-weight: 700;
+  padding-bottom: 30px;
+}
+.our-services .text p {
+  color: #423f8d94;
+  font-size: 30px;
+  font-weight: 200;
+  max-width: 1500px;
+  text-align: center;
+  margin: 0px 20%;
+  margin-top: 20px;
+}
+
+.service-card {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  /* column-gap: 50px; */
+  gap: 50px;
+  box-shadow: rgba(0, 0, 0, 0.288);
+  margin: 5% 8%;
+}
+.service-card div {
+  /* border: #185e43; */
+  /* border-style: solid; */
+}
+/* =========== Marketing card============ */
+.marketing-card {
+  background-color: white;
+  color: #423f8d;
+  display: grid;
+  grid-template-columns: 100px 1fr;
+  grid-template-rows: 1fr;
+  gap: 40px;
+}
+.marketing-card img {
+  width: 50px;
+}
+.marketing-card .img-div {
+  padding: 25px;
+  padding-left: 30px;
+  padding-top: 30px;
+}
+.marketing-card h3 {
+  color: #423f8d;
+  font-size: 40px;
+  font-weight: 700;
+  padding-top: 30px;
+}
+.marketing-card p {
+  color: #423f8dc2;
+  font-size: 25px;
+  font-weight: 300;
+  padding-top: 28px;
+  padding-bottom: 40px;
+}
+
+/* =========== Media-card=============== */
+.media-card {
+  background-color: white;
+  color: #423f8d;
+  display: grid;
+  grid-template-columns: 100px 1fr;
+  grid-template-rows: 1fr;
+  gap: 40px;
+}
+.media-card img {
+  width: 50px;
+}
+.media-card .img-div {
+  padding: 25px;
+  padding-left: 30px;
+  padding-top: 30px;
+}
+.media-card h3 {
+  color: #423f8d;
+  font-size: 40px;
+  font-weight: 700;
+  padding-top: 30px;
+}
+.media-card p {
+  color: #423f8dc2;
+  font-size: 25px;
+  font-weight: 300;
+  padding-top: 28px;
+  padding-bottom: 40px;
+}
+
+/*=================Content Card========  */
+.content-card {
+  background-color: white;
+  color: #423f8d;
+  display: grid;
+  grid-template-columns: 100px 1fr;
+  grid-template-rows: 1fr;
+  gap: 40px;
+}
+.content-card img {
+  width: 50px;
+}
+.content-card .img-div {
+  padding: 25px;
+  padding-left: 30px;
+  padding-top: 30px;
+}
+.content-card h3 {
+  color: #423f8d;
+  font-size: 40px;
+  font-weight: 700;
+  padding-top: 30px;
+}
+.content-card p {
+  color: #423f8dc2;
+  font-size: 25px;
+  font-weight: 300;
+  padding-top: 28px;
+  padding-bottom: 40px;
+}
+
+/* =================Web design card========== */
+
+.web-card {
+  background-color: white;
+  color: #423f8d;
+  display: grid;
+  grid-template-columns: 100px 1fr;
+  grid-template-rows: 1fr;
+  gap: 40px;
+}
+.web-card img {
+  width: 50px;
+}
+.web-card .img-div {
+  padding: 25px;
+  padding-left: 30px;
+  padding-top: 30px;
+}
+.web-card h3 {
+  color: #423f8d;
+  font-size: 40px;
+  font-weight: 700;
+  padding-top: 30px;
+}
+.web-card p {
+  color: #423f8dc2;
+  font-size: 25px;
+  font-weight: 300;
+  padding-top: 28px;
+  padding-bottom: 40px;
 }
