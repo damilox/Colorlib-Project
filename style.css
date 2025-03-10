@@ -33,6 +33,7 @@ body {
   left: 0;
   background: rgba(255, 255, 255, 0.6); /* Transparent at first */
   transition: background 0.3s ease-in-out, padding 0.3s;
+  z-index: 100;
 }
 
 #navbar.scrolled {
@@ -41,6 +42,7 @@ body {
   background: white; /* Becomes solid when sticky */
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
   padding: 25px 70px; /* Slightly smaller padding when sticky */
+  z-index: 100;
 }
 
 #navbar .logo img {
@@ -282,12 +284,12 @@ body {
 /* ------------Begining Of How can we help you section-------- */
 .our-services {
   background: url(./img/Home-img/section_bg01.png);
-  height: 200vh;
+  height: 150vh;
   background-repeat: no-repeat;
 }
 .our-services .text {
   text-align: center;
-  padding-top: 280px;
+  padding-top: 230px;
 }
 .our-services .text h2 {
   color: #423f8d;
@@ -309,9 +311,9 @@ body {
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-template-rows: 1fr 1fr;
-  /* column-gap: 50px; */
-  gap: 50px;
-  box-shadow: rgba(0, 0, 0, 0.288);
+  column-gap: 30px;
+  row-gap: 20px;
+  box-shadow: rgba(0, 0, 0, 1);
   margin: 5% 8%;
 }
 .service-card div {
@@ -408,7 +410,7 @@ body {
   font-size: 25px;
   font-weight: 300;
   padding-top: 28px;
-  padding-bottom: 40px;
+  /* padding-bottom: 40px; */
 }
 
 /* =================Web design card========== */
@@ -440,5 +442,65 @@ body {
   font-size: 25px;
   font-weight: 300;
   padding-top: 28px;
-  padding-bottom: 40px;
+  /* padding-bottom: 40px; */
+}
+
+/* ===============End Of cards section ============= */
+
+/* ===============begining of Solution section======= */
+.solution-section {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr;
+  margin: 0px 8% 30px 8%;
+  gap: 50px;
+  margin-top: 0px;
+  padding-top: 0px;
+}
+.solution-section h2 {
+  color: #423f8d;
+  font-size: 66px;
+  font-weight: 700;
+  line-height: 80px;
+}
+.solution-section h3 {
+  color: #423f8dc2;
+  font-size: 27px;
+  font-weight: 200;
+  line-height: 30px;
+  padding-top: 30px;
+}
+.solution-section button {
+  background-color: #ff5800;
+  color: white;
+  padding: 20px 50px;
+  border: none;
+  border-radius: 40px;
+  font-size: 20px;
+  font-weight: 700;
+  margin-top: 75px;
+}
+.solution-section img {
+  width: 770px;
+}
+
+/* ==========End of solution service */
+.price-plan {
+  margin: 3% 8%;
+}
+.price-heading {
+  text-align: center;
+}
+.price-heading h2 {
+  color: #423f8d;
+  font-size: 60px;
+  font-weight: 700;
+  padding-bottom: 30px;
+}
+.price-heading h3 {
+  color: #423f8dc2;
+  font-size: 28px;
+  font-weight: 300;
+
+  text-align: center;
 }
