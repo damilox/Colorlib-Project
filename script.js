@@ -16,3 +16,13 @@ document.addEventListener("DOMContentLoaded", function () {
   const clones = track.innerHTML; // Duplicate images
   track.innerHTML += clones; // Append them again
 });
+
+// Select the menu button and nav menu
+const menuToggle = document.getElementById("menu-toggle");
+const navLink = document.getElementById("nav-link");
+
+// Toggle menu visibility on button click
+menuToggle.addEventListener("click", () => {
+    navLenu.classList.toggle("active");
+});
+
